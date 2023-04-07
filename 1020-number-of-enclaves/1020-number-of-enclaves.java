@@ -26,19 +26,19 @@ class Solution {
                 }
             }
         }
-        //direction of (i,j)
+        //direction of (i,j) to visit the neighbours
         int deltarow[]={-1,0,+1,0};
         int deltacol[]={0,+1,0,-1};
         
         while(!q.isEmpty()){
-            int row=q.peek().first;
-            int col=q.peek().second;
+            int row=q.peek().first;//row number
+            int col=q.peek().second;//col number
             q.remove();
             
             //traverse all 4 directions
             for(int i=0;i<4;i++){
-                int nrow= row + deltarow[i];
-                int ncol= col + deltacol[i];
+                int nrow= row + deltarow[i];//neighbouring row
+                int ncol= col + deltacol[i];//neighbouring col
                 //checking boundary conditon
                 if(nrow>=0 && nrow<n && ncol>=0 && ncol<m && vis[nrow][ncol]==0 && grid[nrow][ncol]==1){
                     q.add(new Pair(nrow,ncol));
