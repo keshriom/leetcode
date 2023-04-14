@@ -1,4 +1,5 @@
 class Solution {
+    //we can also use copy the board matirx in copyboard and then iterate in the copy matrix but it will take more space i.e.,O(m*n) while this one is taking O(n)
     public boolean isSafe(int x,int y, int row,int col){
         return (x>=0 && x<row && y>=0 && y<col);//boundary condition
     }
