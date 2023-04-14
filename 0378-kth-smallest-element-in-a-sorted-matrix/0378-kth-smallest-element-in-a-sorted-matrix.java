@@ -9,8 +9,6 @@ class Solution {
             for(int j = 0;j<n;j++){
                 if(pq.size() < k){
                     pq.add(matrix[i][j]); 
-                System.out.println(pq.peek());
-
                 }else{ //equal to k
                     if(matrix[i][j] < pq.peek()){ //if incoming element is less than peek like  [[1,2],[1,3]]
                         pq.poll();
