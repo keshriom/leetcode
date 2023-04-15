@@ -3,7 +3,7 @@ class Solution {
         StringBuffer sb=new StringBuffer(s);
         return lcs(s,sb.reverse().toString());
     }
-    
+    //fuction to find the longest common subsequences
     public int lcs(String a ,String b){
         int m=a.length();
         int n=b.length();
@@ -11,11 +11,14 @@ class Solution {
         
         for(int i=0;i<m+1;i++){
             for(int j=0;j<n+1;j++){
-                if(i==0 || j==0)
+                if(i==0 || j==0)//if length of string is zero
                     t[i][j]=0;
+                //comparing the last character of the string 
                 else if(a.charAt(i-1)==b.charAt(j-1)){
                     t[i][j]=1+t[i-1][j-1];
                 }
+                //if last character is not equal then 1st time discard the last element of                      string a and then 2nd time discard the last element of string b and take                        maximum of the two value 
+
                 else {
                     t[i][j]=Math.max(t[i][j-1],t[i-1][j]);
                 }
