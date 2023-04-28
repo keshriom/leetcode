@@ -16,6 +16,28 @@ class Solution {
             set.add(res);
             n=res;  // Update n with the sum of the squares of its digits
         }
-        return true;
+        return true;//return n==1;
     }
 }
+// class Solution {
+//     public boolean isHappy(int n) {
+//         //------using Tortoise and the Hare algorithm or Floyd's cycle-finding algorithm"
+//         int slow=n;
+//         int fast=n;
+//         do{
+//             slow=compute(slow);
+//             fast=compute(compute(fast));
+//         }while(slow!=fast);
+//         if(slow==1)
+//             return true;
+//         return false;
+//     }
+//     public int compute(int n){
+//         int res=0;
+//         while(n!=0){
+//         res+=Math.pow(n%10,2);
+//         n=n/10;
+//     }
+//     return res;
+//     }
+// }
