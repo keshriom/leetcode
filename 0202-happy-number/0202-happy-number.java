@@ -16,6 +16,6 @@ class Solution {
             set.add(res);
             n=res;  // Update n with the sum of the squares of its digits
         }
-        return n==1;
+        return true;
     }
 }
