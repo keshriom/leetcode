@@ -14,3 +14,9 @@ class Solution {
         return avg;
     }
 }
+//without sorting we can do ---
+//firt take min and max salary ,
+//then calculate the sum of the salary 
+//then subtarct the min and max value from the sum 
+//and then return avg =sum/length-2
+//-2 is because of min and max terms
