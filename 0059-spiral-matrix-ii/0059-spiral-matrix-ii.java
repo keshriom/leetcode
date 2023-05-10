@@ -2,16 +2,10 @@ class Solution {
     public int[][] generateMatrix(int n) {
         //making a matrix of lenght n*n
         int[][] mat=new int[n][n];
-        // int row=col=n;
-        // for(int i=0;i<row;i++){
-        //     for(int j=0;j<col;j++){
-        //         mat[i][j]=0;
-        //     }
-        // }
-        int top=0;//topmost left corner
-        int left=0;//bottommost left corner
-        int right=mat[0].length-1;//topmost right corner
-        int bottom=mat.length-1;//bottommost right corner
+        int top=0;//indicating the 1st row
+        int left=0;//indicating the 1st col
+        int right=mat[0].length-1;//indicating the last col
+        int bottom=mat.length-1;//indicating the last row
         int num=1;
         while(top<=bottom && left<=right){
             //traverse left to right
