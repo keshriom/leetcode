@@ -19,3 +19,4 @@ class Solution {
         return dp[n];//return the corresponding value of n from the dp table
     }
 }
+//you can use Legendre's 3-Square Theorem also
