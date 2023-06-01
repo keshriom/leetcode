@@ -67,6 +67,6 @@ class Solution {
      for(int i=0;i<n-1;i+=2){
          swap(nums,i,i+1);
      }
-    }
+}
 }
         
